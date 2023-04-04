@@ -1,51 +1,57 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addHabit } from "../store/habitSlice";
 
 const Navbar = ({ name }) => {
-  // call use dispatch hook a variable call dispatch
-  const dispatch=useDispatch();
 
-  // change state acording time
+  //  dispatch hook to dispatch our actions
+  const dispatch = useDispatch();
+
+  // changing state according to time
   const [hour, setHour] = useState(0);
-  const [time,setTime] = useState("");
+  const [time, setTime] = useState("");
 
   useEffect(() => {
     const date = new Date();
     setHour(date.getHours());
   }, []);
 
-useEffect(()=>{
-  let time = new Date().toLocaleTimeString();
-  setTimeout(()=>{
-    setTime(time);
-  },1000);
-  
-},[time])
+  useEffect(() => {
+    let time = new Date().toLocaleTimeString();
+    setTimeout(() => {
+      setTime(time);
+    }, 1000);
 
-  
-  // function for add habit 
-  const handleSave=()=>{
-    const habitName=document.getElementById("habitName").value;
-    dispatch(addHabit(habitName));
-    alert("Your habit added successfully");
-    document.getElementById("habitName").value="";
+  }, [time])
+
+
+  // function to add a new habit 
+  const handleNewHabit = () => {
+    const habitName = document.getElementById("habitName").value;
+    if (habitName.trim().length === 0) {
+      alert("You must enter your habit name");
+    }
+    else {
+      dispatch(addHabit(habitName));
+      alert("Your habit added successfully");
+      document.getElementById("habitName").value = "";
+    }
   }
 
   return (
-    <>
+    <Fragment>
       <div className="navbar">
         <h3 className="greet-time">
-          {/* acording to time its shows morning,afternoon,evening and night */}
+          {/* Greet according to time */}
           {hour <= 12
             ? "Good Morning"
             : hour <= 17
-            ? "Good Afternoon"
-            : hour <= 21
-            ? " Good Evening"
-            : "Good Night"}
-            {" " + time}
+              ? "Good Afternoon"
+              : hour <= 21
+                ? " Good Evening"
+                : "Good Night"}
+          {" " + time}
         </h3>
         <div className="right-nav">
           <h5>{name}</h5>
@@ -59,7 +65,7 @@ useEffect(()=>{
         </div>
       </div>
 
-      {/* modal for add habit form */}
+      {/* modal to add a new habit  */}
       <div
         className="modal fade"
         id="staticBackdrop"
@@ -98,14 +104,14 @@ useEffect(()=>{
               >
                 Cancel
               </button>
-              <button type="button" className="btn btn-primary" onClick={handleSave}>
+              <button type="button" className="btn btn-primary" onClick={handleNewHabit}>
                 Save
               </button>
             </div>
           </div>
         </div>
       </div>
-    </>
+      </Fragment>
   );
 };
 

@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Navbar from "./Navbar";
 import Habits from "./Habits";
 
-const HomePage = () => {
+const Homepage = () => {
     return (
         <Fragment>
             <Navbar/>
@@ -10,4 +10,4 @@ const HomePage = () => {
         </Fragment>
     )
 }
-export default HomePage;
+export default Homepage;

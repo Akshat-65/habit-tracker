@@ -1,17 +1,20 @@
-/* style add for all element */
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
-a{
+
+a {
   text-decoration: none;
   color: white;
-}a:hover{
+
+}
+
+a:hover {
   color: white;
 }
 
-/* style for body */
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -22,8 +25,8 @@ body {
   color: white;
 }
 
-/* style root div */
-#root{
+
+#root {
   margin-top: 2px;
   width: 99%;
   border-right: 3px solid #ffffff;
@@ -31,8 +34,8 @@ body {
   border-radius: 10px 10px 0px 0px;
 }
 
-/* style navbar component ---------------------------------*/
-.navbar{
+
+.navbar {
   /* margin-top: 5px; */
   align-items: center;
   display: flex;
@@ -45,22 +48,24 @@ body {
   background-color: #03031a;
   flex-wrap: wrap;
 }
-.right-nav{
+
+.right-nav {
   display: flex;
   align-items: center;
 }
-.right-nav h5{
+
+.right-nav h5 {
   color: #DDDDDD;
   margin-right: 10px;
 }
 
-.greet-time{
+.greet-time {
   border-top: 1px solid white;
   padding: 10px;
   border-radius: 10px;
 }
 
-.addhabit-btn{
+.addhabit-btn {
   color: #1c2d8f;
   background-color: #ffffff;
   padding: 8px 20px;
@@ -68,38 +73,37 @@ body {
   font-weight: 700;
 }
 
-.addhabit-btn:hover{
-  color:  #ffffff;
+.addhabit-btn:hover {
+  color: #ffffff;
   background-color: #1c2d8f;
 }
 
-/* modal */
 
-.modal-content{
+
+.modal-content {
   background-color: #ffffff;
   color: #080641;
   font-weight: 600;
 }
 
-.modal-content input{
+.modal-content input {
   font-family: cursive;
 }
 
-.modal-header{
+.modal-header {
   border: none;
 }
-.modal-footer{
-  border: none;
-}
-/* ---------------------------------------------------- */
 
-/* habits components style------------------------------ */
-.habits{
+.modal-footer {
+  border: none;
+}
+
+
+.habits {
   width: 100%;
 }
 
-/* habit under habits component */
-.habit{
+.habit {
   width: 100%;
   height: 100px;
   border-bottom: 1px dashed #ffffff;
@@ -109,34 +113,39 @@ body {
   padding: 0px 20px;
   border-radius: 10px;
 }
-.habit:hover{
+
+.habit:hover {
   background-color: #081840;
 }
 
-.habit-name{
+.habit-name {
   margin: 10px;
 }
 
-.habit-left{
+.habit-left {
   display: flex;
   align-items: center;
 }
-.habit-left i{
+
+.habit-left i {
   color: #2AA8D0;
   padding: 10px;
   border-radius: 50%;
   background-color: #304950;
   margin-right: 10px;
 }
-.day-complete{
+
+.day-complete {
   color: #767475;
-  font-size:small;
+  font-size: small;
 }
-.habit-right{
+
+.habit-right {
   display: flex;
   align-items: center;
 }
-.log-btn{
+
+.log-btn {
   text-decoration: none;
   cursor: pointer;
   background-color: #040223;
@@ -147,38 +156,39 @@ body {
   border: none;
   transition: all 0.3s ease-in-out;
 }
-.log-btn:hover{
+
+.log-btn:hover {
   background-color: white;
-  color:#040223;
+  color: #040223;
   transform: scale(1.03);
 }
-.log-btn i{
+
+.log-btn i {
   margin-right: 5px;
 }
-.fa-trash{
+
+.fa-trash {
   cursor: pointer;
   padding: 10px;
   border-radius: 7px;
-  background-color: #424242;
+  background-color: #040223;
   transition: all 0.3s ease-in-out;
 }
-.fa-trash:hover{
+
+.fa-trash:hover {
   background-color: white;
-  color:#040223;
+  color: #040223;
   transform: scale(1.03);
 }
 
-/* ------------------------------------------------------*/
-
-/* style week view container --------------------------- */
-.days-container{
+.days-container {
   margin: 20px 0px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-/* style day view component */
-.day-container{
+
+.day-container {
   height: 100px;
   width: 150px;
   background-color: #02061c;
@@ -186,33 +196,39 @@ body {
   padding: 5px;
   margin: 5px;
 }
-p{
+
+.day-container:hover {
+  color: #02061c;
+  background-color: white;
+}
+
+p {
   margin: 0%;
 }
-.circle-icon{
+
+.circle-icon {
   font-size: 24px;
   margin: 5px 11px;
-  /* color: #0B5ED7; */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.active{
-  color: #0B5ED7 ;
+
+.active {
+  color: #0B5ED7;
 }
 
-.circle-icon:hover{
+.circle-icon:hover {
   transform: scale(1.2);
 }
 
-.border-bottom{
+.border-bottom {
   border-bottom: 2px solid white;
   border-radius: 10px;
 }
 
-@media screen and (max-width:516px){
-  .navbar{
+@media screen and (max-width:516px) {
+  .navbar {
     justify-content: space-evenly;
 
   }
 }
-/* ------------------------------------------------------*/

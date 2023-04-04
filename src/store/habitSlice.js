@@ -7,10 +7,10 @@ export const habitSlice = createSlice({
   initialState: [],
   reducers: {
     addHabit: (state, action) => {
-      const today=new Date();
-      let day=today.getDate()-today.getDay();
-      const month= today.getMonth();
-      const year =today.getFullYear();
+      const currentDate=new Date();
+      let day=currentDate.getDate()-currentDate.getDay();
+      const month= currentDate.getMonth();
+      const year =currentDate.getFullYear();
 
       const habit = {
         id: id++,
@@ -82,6 +82,7 @@ export const habitSlice = createSlice({
       const tempHabits = state.filter((habit) => habit.id !== action.payload);
       return tempHabits;
     },
+
     habitDone: (state, action) => {
       let tempHabits = state;
       for (let i = 0; i < tempHabits.length; i++) {
@@ -91,6 +92,7 @@ export const habitSlice = createSlice({
       }
       return tempHabits;
     },
+
     habitUnDone: (state, action) => {
       let tempHabits = state;
       for (let i = 0; i < tempHabits.length; i++) {
@@ -100,6 +102,7 @@ export const habitSlice = createSlice({
       }
       return tempHabits;
     },
+    
     habitNone: (state, action) => {
       let tempHabits = state;
       for (let i = 0; i < tempHabits.length; i++) {
