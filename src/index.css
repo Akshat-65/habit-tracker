@@ -63,6 +63,8 @@ body {
   border-top: 1px solid white;
   padding: 10px;
   border-radius: 10px;
+  font-family: auto;
+  font-style: italic;
 }
 
 .addhabit-btn {
@@ -120,6 +122,8 @@ body {
 
 .habit-name {
   margin: 10px;
+  font-style: oblique;
+  font-family: auto;
 }
 
 .habit-left {
