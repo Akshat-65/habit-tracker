@@ -1,3 +1,7 @@
+Description: It is a multipage responsive habit tracker app in which you can add your habit and track them on daily basis.By clicking on week view you can track your actions on any particular habit on a daily basis and can mark them as done, not done or none. It also shows the count of number of days you have completed a particular task. I have used Redux and react router in this application to makle it more efficient and for styling purpose I have used Bootstrap. 
+CheckOut: https://akshat-habit-tracker.netlify.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
